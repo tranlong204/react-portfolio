@@ -1,4 +1,6 @@
-import React, {useState, useEffect} from "react";
+import Blog from './components/Blog';
+import BlogDetail from './components/BlogDetail';
+import React, { useState, useEffect } from "react";
 import {
   Main,
   Timeline,
@@ -11,34 +13,38 @@ import {
 import FadeIn from './components/FadeIn';
 import './index.scss';
 
+import { Routes, Route } from "react-router-dom";
+
 function App() {
-    const [mode, setMode] = useState<string>('dark');
+  const [mode, setMode] = useState<string>('dark');
 
-    const handleModeChange = () => {
-        if (mode === 'dark') {
-            setMode('light');
-        } else {
-            setMode('dark');
-        }
-    }
+  const handleModeChange = () => {
+    setMode(mode === 'dark' ? 'light' : 'dark');
+  };
 
-    useEffect(() => {
-        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-      }, []);
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  }, []);
 
-    return (
+  return (
     <div className={`main-container ${mode === 'dark' ? 'dark-mode' : 'light-mode'}`}>
-        <Navigation parentToChild={{mode}} modeChange={handleModeChange}/>
-        <FadeIn transitionDuration={700}>
-            <Main/>
-            <Expertise/>
-            <Timeline/>
-            <Project/>
-            <Contact/>
-        </FadeIn>
-        <Footer />
+      <Navigation parentToChild={{ mode }} modeChange={handleModeChange} />
+      <Routes>
+        <Route path="/" element={
+          <FadeIn transitionDuration={700}>
+            <Main />
+            <Expertise />
+            <Timeline />
+            <Project />
+            <Contact />
+          </FadeIn>
+        } />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<BlogDetail />} />
+      </Routes>
+      <Footer />
     </div>
-    );
+  );
 }
 
 export default App;
