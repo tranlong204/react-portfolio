@@ -8,7 +8,6 @@ export interface BlogPost {
   summary: string;
   content: string;
   slug: string;
-  tags?: string[];
 }
 
 export const useContentfulPosts = () => {
@@ -22,7 +21,6 @@ export const useContentfulPosts = () => {
         title: item.fields.title,
         date: item.fields.date,
         summary: item.fields.summary,
-        tags: item.fields.tags || [],
         content: item.fields.content,
         slug: item.fields.slug,
       }));
