@@ -56,8 +56,8 @@ function Timeline() {
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Teaching Assistance</h3>
-            <h4 className="vertical-timeline-element-subtitle">HCMC University of Technology & Education, Vietnam</h4>
+            <h3 className="vertical-timeline-element-title">Teaching Assistant</h3>
+            <h4 className="vertical-timeline-element-subtitle">HCMC University of Technology and Education, Vietnam</h4>
             <p>
               Algorithm & Data structure
             </p>
