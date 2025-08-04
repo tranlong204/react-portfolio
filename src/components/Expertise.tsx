@@ -6,29 +6,32 @@ import Chip from '@mui/material/Chip';
 import '../assets/styles/Expertise.scss';
 
 const labelsFirst = [
+    "Java",
+    "Spring Boot",
     "React",
-    "TypeScript",
     "JavaScript",
+    "TypeScript",
     "HTML5",
     "CSS3",
     "SASS",
-    "Flask",
-    "Python",
     "SQL",
     "PostgreSQL",
-    "Postman"
+    "MySQL",
+    "Oracle",
+    "MongoDB",
+    "CouchbaseDB"
 ];
 
 const labelsSecond = [
     "Git",
-    "GitHub Actions",
+    "Gitlab",
+    "Bitbucket",
     "Docker",
+    "Kubernetes",
+    "ArgoCD",
     "AWS",
-    "Azure",
     "Linux",
-    "Snowflake",
-    "Pandas",
-    "Selenium",
+    "Selenium"
 ];
 
 const labelsThird = [
@@ -71,17 +74,17 @@ function Expertise() {
                     </div>
                 </div>
 
-                <div className="skill">
-                    <FontAwesomeIcon icon={faPython} size="3x"/>
-                    <h3>GenAI & LLM</h3>
-                    <p>Stay relevant in the market by leveraging the latest AI models in your projects. I have professional experience building enterprise grade GenAI-enabled solutions to empower intelligent decision making.</p>
-                    <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {labelsThird.map((label, index) => (
-                            <Chip key={index} className='chip' label={label} />
-                        ))}
-                    </div>
-                </div>
+                {/*<div className="skill">*/}
+                {/*    <FontAwesomeIcon icon={faPython} size="3x"/>*/}
+                {/*    <h3>GenAI & LLM</h3>*/}
+                {/*    <p>Stay relevant in the market by leveraging the latest AI models in your projects. I have professional experience building enterprise grade GenAI-enabled solutions to empower intelligent decision making.</p>*/}
+                {/*    <div className="flex-chips">*/}
+                {/*        <span className="chip-title">Tech stack:</span>*/}
+                {/*        {labelsThird.map((label, index) => (*/}
+                {/*            <Chip key={index} className='chip' label={label} />*/}
+                {/*        ))}*/}
+                {/*    </div>*/}
+                {/*</div>*/}
             </div>
         </div>
     </div>
