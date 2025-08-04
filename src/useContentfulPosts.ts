@@ -4,11 +4,15 @@ import client from './api/contentfulClient';
 export interface BlogPost {
   id: string;
   title: string;
+  slug: string;
   date: string;
   summary: string;
-  content: string;
-  slug: string;
+  image?: string;
+  tags?: string[];
+  content?: string;
 }
+
+
 
 export const useContentfulPosts = () => {
   const [posts, setPosts] = useState<BlogPost[]>([]);
